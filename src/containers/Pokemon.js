@@ -23,14 +23,14 @@ function Pokemon(props) {
                     </div>
                     <div className="item">
                         <h1>Stats</h1>
-                        {pokeData.stats.map(el => {
-                            return <p>{el.stat.name} {el.base_stat}</p>
+                        {pokeData.stats.map((el, index) => {
+                            return <p key={index}>{el.stat.name} {el.base_stat}</p>
                         })}
                     </div>
                     <div className="item">
                         <h1>Abilities</h1>
-                        {pokeData.abilities.map(el => {
-                            return <p>{el.ability.name}</p>
+                        {pokeData.abilities.map((el, index) => {
+                            return <p key={index}>{el.ability.name}</p>
                         })}
                     </div>
                     

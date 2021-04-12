@@ -4,6 +4,7 @@ import _ from "lodash";
 import {GetPokemonList} from "../actions/pokemonActions";
 import { Link } from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
+import SearchIcon from '@material-ui/icons/Search';
 
  
 function PokemonList(props) {
@@ -30,7 +31,7 @@ function PokemonList(props) {
                 <div className={"list-wrapper"}>
                     {pokemonList.data.map(el => {
                 return (
-                    <div className={"pokemon-item"}>
+                    <div className={"pokemon-item"} key={el.name}>
                         <p>{el.name}</p>
                         <Link to={`/pokemon/${el.name}`}>View</Link>
                     </div>
@@ -48,11 +49,16 @@ function PokemonList(props) {
     }
 
     return (
-        <div>
+        <div className="pokemon-list">
             <div className={"search-wrapper"}>
-                <p>Search: </p>
-                <input type="text" onChange={e => setSearch(e.target.value)} />
-                <button onClick={()=> props.history.push(`/pokemon/${search}`)}>Search</button>
+                <form className="searchWrapper-form" onSubmit={()=> props.history.push(`/pokemon/${search}`)}>
+                    <p>Search Pokemon</p>
+                    <div className="searchform">
+                        <input className="searchForm-searchbar" placeholder="ex. pikachu" type="text" onChange={e => setSearch(e.target.value)} />
+                        <button><SearchIcon /></button>
+                    </div>
+                </form>
+                
             </div>
             {ShowData()}
             {!_.isEmpty(pokemonList.data) && (
@@ -62,6 +68,8 @@ function PokemonList(props) {
                     marginPagesDisplayed={1}
                     onPageChange={(data) => fetchData(data.selected + 1)}
                     containerClassName={"pagination"}
+                    activeClass={"pagination-active"}
+                    pageClassName={"pagination-item"}
                 />
             )}
         </div>

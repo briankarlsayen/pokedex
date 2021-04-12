@@ -23,7 +23,7 @@ nav a {
 }
 
 .list-wrapper {
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 
@@ -35,6 +35,15 @@ nav a {
   border: 2px solid coral;
   border-radius: 7px;
   padding: 10px;
+  background-color: white;
+}
+
+.pokemon-item > p {
+  margin: 0 10px;
+}
+
+.pokemon-item > a {
+  margin: 0 10px;
 }
 
 .list-wrapper a {
@@ -57,12 +66,61 @@ nav a {
   width: 30%;
 }
 
+.pokemon-wrapper > .item > h1 {
+  font-size: 24px;
+}
+
+.pokemon-list {
+  background-color: #e8e8e8;
+}
+
 .search-wrapper {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.searchWrapper-form {
+  display: flex;
+  flex-direction: column;
   margin: 20px 0;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.searchform {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.searchform > .searchForm-searchbar {
+  border: none;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 7px 0 0 7px;
+  padding: 10px 30px;
+}
+
+.searchform > button {
+  border: none;
+  background-color: white;
+  margin-bottom: 2px;
+  vertical-align: center;
+  border-radius: 0 7px 7px 0;
+}
+
+input[type="text"] {
+  margin-bottom: 2px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }
 
 .pagination {
@@ -71,5 +129,31 @@ nav a {
   margin: auto;
   list-style: none;
   padding: 0;
+  padding-bottom: 10px;
   justify-content: space-between;
+  width: 70%;
+}
+
+.pagination-item {
+  padding: 0 20px;
+}
+
+.pagination-active {
+  background-color: pink;
+}
+
+.poke > h1 {
+  text-transform: capitalize;
+}
+
+@media (max-width: 800px) {
+  .pokemon-wrapper > .item > h1 {
+    font-size: 18px;
+  }
+  .pokemon-wrapper > .item > p {
+    font-size: 14px;
+  }
+  .pagination-item {
+    padding: 0 5px;
+  }
 }
