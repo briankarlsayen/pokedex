@@ -8,18 +8,39 @@ p {
 }
 
 nav {
-  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
   height: 60px;
   align-items: center;
-  justify-content: flex-end;
   background-color: coral;
+  justify-content: center;
+}
+
+nav div {
+  width: 80%;
+  height: 50%;
+  top: 25%;
+  margin: 0 auto;
+  position: relative;
+}
+
+nav div a {
+  display: flex;
+  width: 80%;
 }
 
 nav a {
   margin-right: 50px;
   color: white;
   text-decoration: none;
+}
+
+nav a img {
+  width: 28px;
+  margin-right: 10px;
 }
 
 .list-wrapper {
@@ -71,6 +92,7 @@ nav a {
 }
 
 .pokemon-list {
+  margin-top: 50px;
   background-color: #e8e8e8;
 }
 

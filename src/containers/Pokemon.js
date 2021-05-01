@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import {GetPokemon} from '../actions/pokemonActions';
 import _ from 'lodash';
 
-
 function Pokemon(props) {
     const pokemonName = props.match.params.pokemon;
     const dispatch = useDispatch();
