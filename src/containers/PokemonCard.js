@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import {GetPokemon} from '../actions/pokemonActions';
 import _ from 'lodash';
 import '../PokemonCard.css';
+import pokemonType from './typeColors';
 
 function Pokemon(props) {
     const pokemonName = props.match.params.pokemon;
@@ -14,9 +15,16 @@ function Pokemon(props) {
             const pokeData = pokemonState.data[pokemonName];
             return(
                 <div className="pokemon-card">
-                    <div className="pokemonCard-img">
-                        <img src={pokeData.sprites.front_default} alt="" />
-                        <h2>{pokemonName}</h2>
+                    <div className="pokemonCard-imgbackground">
+                        <div className="pokemonCard-img">
+                            <img src={pokeData.sprites.front_default} alt="" />
+                            <h2 className="name">{pokemonName}</h2>
+                                <div className="pokemonCard-type">
+                                {pokeData.types.map((el, index) => {
+                                    return <p className="img-type" key={index} style={{backgroundColor: pokemonType[el.type.name]}}>{el.type.name}</p>
+                                })}
+                            </div>
+                        </div>
                     </div>
                     <div className="pokemonCard-right">
                         <div className="pokemonCard-stats">
