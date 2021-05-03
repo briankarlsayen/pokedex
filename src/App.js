@@ -1,7 +1,7 @@
 import { Redirect, Route, Switch } from 'react-router';
 import './App.css';
 import PokemonList from './containers/PokemonList';
-import Pokemon from './containers/Pokemon';
+import PokemonCard from './containers/PokemonCard';
 import { NavLink } from 'react-router-dom';
 import PokeballImg from './pokeball.svg';
 
@@ -19,7 +19,7 @@ function App() {
       </nav>
       <Switch>
         <Route path={"/"} exact component={PokemonList} />
-        <Route path={"/pokemon/:pokemon"} exact component={Pokemon} />
+        <Route path={"/pokemon/:pokemon"} exact component={PokemonCard} />
         <Redirect to={"/"} />
       </Switch>
     </div>

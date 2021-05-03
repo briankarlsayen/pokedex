@@ -7,6 +7,17 @@ p {
   padding: 0;
 }
 
+.App {
+  background-image: linear-gradient(
+    25deg,
+    #a7ffff 0,
+    #a4f4ff 25%,
+    #9dd5f2 50%,
+    #94b7cc 75%,
+    #899caa 100%
+  );
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -15,7 +26,7 @@ nav {
   height: 100%;
   height: 60px;
   align-items: center;
-  background-color: coral;
+  background-color: #7868e6;
   justify-content: center;
 }
 
@@ -53,7 +64,7 @@ nav a img {
   margin: 10px 0;
   display: flex;
   justify-content: space-between;
-  border: 2px solid coral;
+  border: 2px solid #b8b5ff;
   border-radius: 7px;
   padding: 10px;
   background-color: white;
@@ -73,8 +84,12 @@ nav a img {
 }
 
 .poke {
+  height: 100vh;
   width: 90%;
-  margin: auto;
+  margin-left: 5%;
+  margin-top: 60px;
+  padding: 20px 0;
+  justify-content: center;
 }
 
 .pokemon-wrapper {
@@ -168,7 +183,7 @@ button:focus {
   text-transform: capitalize;
 }
 
-@media (max-width: 800px) {
+@media only screen and (min-width: 800px) {
   .pokemon-wrapper > .item > h1 {
     font-size: 18px;
   }

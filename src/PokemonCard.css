@@ -1,0 +1,104 @@
+.pokemon-card {
+  text-align: center;
+  width: 80%;
+  border: 1px solid black;
+  margin-left: 10%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #e4fbff;
+  text-transform: uppercase;
+}
+
+.pokemonCard-img > img {
+  margin-top: 20px;
+  border: 1px solid black;
+  width: 125px;
+  background-color: #edeef7;
+}
+
+.pokemon-card h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+}
+
+.pokemon-card > h3 {
+  font-size: 1em;
+}
+
+.pokemon-card > p {
+  font-size: 0.85em;
+}
+
+.pokemonCard-stats {
+  margin: 0 20% 20px 20%;
+}
+
+.pokemonCard-abilities {
+  border-top: 1px solid black;
+  padding-bottom: 20px;
+}
+
+.pokemonCard-stats p {
+  text-align: left;
+}
+
+.pokemonCard-stats p span {
+  float: right;
+}
+
+@media only screen and (min-width: 800px) {
+  .pokemon-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    border: none;
+    background-color: transparent;
+  }
+  .pokemonCard-img {
+    background-color: #e4fbff;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr 0.5fr;
+    justify-content: center;
+  }
+
+  .pokemonCard-right {
+    background-color: #e4fbff;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  .pokemonCard-img img {
+    grid-row: 2/3;
+    min-width: 150px;
+  }
+
+  .pokemonCard-img h2 {
+    grid-row: 3/3;
+  }
+
+  .pokemon-card h2 {
+    border: none;
+  }
+
+  .pokemonCard-stats {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .pokemonCard-stats p {
+    padding: 0 10%;
+  }
+
+  .subtitle {
+    text-align: left;
+    padding-left: 10%;
+  }
+  .pokemonCard-abilities .text {
+    padding-left: 10%;
+    text-align: left;
+  }
+}
